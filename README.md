@@ -76,6 +76,49 @@ It splits into standalone topic docs. Open each one, walk through it, demo, move
 
 ---
 
+## Example Projects
+
+Two demo projects for hands-on skill usage. Clone, start, and use skills to build new features.
+
+### Taskify UI (React + TypeScript)
+
+```bash
+cd examples/taskify-ui
+npm install
+npm run dev
+# → http://localhost:5173
+```
+
+A task manager with add, toggle, and delete. Try building a **TaskFilterBar** component using skills:
+
+```bash
+/react-component TaskFilterBar         # scaffold component + test + story
+/test-generator src/components/TaskFilterBar/TaskFilterBar.tsx
+/code-review src/
+/security-scan src/
+```
+
+### Taskify API (Python + FastAPI)
+
+```bash
+cd examples/taskify-api
+uv sync
+uv run uvicorn taskify_api.main:app --reload
+# → http://localhost:8000/docs
+```
+
+A REST API with CRUD endpoints. Try adding **filtering & bulk operations** using skills:
+
+```bash
+# After implementing the feature:
+/api-test-generator                    # generate integration tests
+/test-generator src/taskify_api/store.py
+/code-review src/
+/security-scan src/
+```
+
+---
+
 ## Repo Structure
 
 ```
@@ -92,6 +135,10 @@ ai-workshop-agent-skills/
 │   ├── 06-setup-guide.md
 │   ├── 07-agentic-loop.md
 │   └── 08-common-problems-and-cheatsheet.md
+│
+├── examples/
+│   ├── taskify-ui/                        ← React + Vite + TypeScript task manager
+│   └── taskify-api/                       ← Python + FastAPI + uv task API
 │
 ├── .claude/skills/                        ← Skills for Claude Code, Cursor, Copilot, OpenCode
 │   ├── commit-format/                        Pattern 1: Basic Router
