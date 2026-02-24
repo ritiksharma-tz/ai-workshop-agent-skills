@@ -59,9 +59,9 @@ You'll convert one of these into a working skill during the session.
 
 ---
 
-## Session 2: Skills vs Prompts & Introduction to Agents
+## Skills vs Prompts & Introduction to Agents
 
-The session is split into standalone topic docs. Open each one, walk through it, demo, move on.
+It splits into standalone topic docs. Open each one, walk through it, demo, move on.
 
 | #   | Topic                                | Doc                                                                                              | Demo                 |
 | --- | ------------------------------------ | ------------------------------------------------------------------------------------------------ | -------------------- |
