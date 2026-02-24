@@ -2,18 +2,18 @@
 
 ## 10 Developer Pain Points → Skill Solutions
 
-| Problem | Pattern | Skill Name |
-|---------|---------|------------|
-| Inconsistent commit messages | Basic Router | `commit-format` |
-| Missing license headers in new files | Asset Utilization | `license-header` |
-| New devs writing non-standard code | Few-Shot Learning | `code-style-guide` |
-| Manual database migration validation | Procedural Logic | `db-schema-validator` |
-| Repetitive component scaffolding | Orchestration | `react-component` |
-| Inconsistent PR descriptions | Basic Router | `pr-description` |
-| Forgotten test edge cases | Few-Shot Learning | `test-patterns` |
-| Manual deployment checklists | Orchestration + Manual | `deploy-checklist` |
-| Onboarding new team members | Asset Utilization | `codebase-guide` |
-| Repetitive API client generation | Procedural + Few-Shot | `api-client-gen` |
+| Problem                              | Pattern                | Skill Name            |
+| ------------------------------------ | ---------------------- | --------------------- |
+| Inconsistent commit messages         | Basic Router           | `commit-format`       |
+| Missing license headers in new files | Asset Utilization      | `license-header`      |
+| New devs writing non-standard code   | Few-Shot Learning      | `code-style-guide`    |
+| Manual database migration validation | Procedural Logic       | `db-schema-validator` |
+| Repetitive component scaffolding     | Orchestration          | `react-component`     |
+| Inconsistent PR descriptions         | Basic Router           | `pr-description`      |
+| Forgotten test edge cases            | Few-Shot Learning      | `test-patterns`       |
+| Manual deployment checklists         | Orchestration + Manual | `deploy-checklist`    |
+| Onboarding new team members          | Asset Utilization      | `codebase-guide`      |
+| Repetitive API client generation     | Procedural + Few-Shot  | `api-client-gen`      |
 
 ---
 
@@ -62,13 +62,15 @@
 
 ## Resources
 
-| Resource | Link |
-|----------|------|
-| Agent Skills Standard | [agentskills.io](https://agentskills.io) |
-| Specification | [agentskills.io/specification](https://agentskills.io/specification) |
-| Example Skills | [github.com/anthropics/skills](https://github.com/anthropics/skills) |
-| Claude Code Docs | [code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills) |
-| Cursor Docs | [cursor.com/docs/context/skills](https://cursor.com/docs/context/skills) |
-| Copilot Docs | [docs.github.com/.../about-agent-skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) |
-| Antigravity Docs | [codelabs.developers.google.com/...antigravity-skills](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) |
-| OpenCode Docs | [opencode.ai/docs/skills](https://opencode.ai/docs/skills/) |
+| Resource              | Link                                                                                                                                   |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Agent Skills Standard | [agentskills.io](https://agentskills.io)                                                                                               |
+| Specification         | [agentskills.io/specification](https://agentskills.io/specification)                                                                   |
+| Example Skills        | [github.com/anthropics/skills](https://github.com/anthropics/skills)                                                                   |
+| Claude Code Docs      | [code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills)                                                               |
+| Cursor Docs           | [cursor.com/docs/context/skills](https://cursor.com/docs/context/skills)                                                               |
+| Copilot Docs          | [docs.github.com/.../about-agent-skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)                        |
+| Antigravity Docs      | [codelabs.developers.google.com/...antigravity-skills](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) |
+| OpenCode Docs         | [opencode.ai/docs/skills](https://opencode.ai/docs/skills/)                                                                            |
+| Vercel Agent Skills   | [github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills/tree/main)                                           |
+| Skills.sh             | [skills.sh](https://skills.sh/)                                                                                                        |

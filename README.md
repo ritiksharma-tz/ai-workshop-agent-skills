@@ -275,5 +275,7 @@ This repo includes skills in **all five directories** so it works everywhere out
 | Google Antigravity Skills | [codelabs.developers.google.com/...antigravity-skills](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) |
 | OpenCode Skills           | [opencode.ai/docs/skills](https://opencode.ai/docs/skills/)                                                                            |
 | Example Skills Library    | [github.com/anthropics/skills](https://github.com/anthropics/skills)                                                                   |
+| Vercel Agent Skills       | [github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills/tree/main)                                           |
+| Skills.sh                 | [skills.sh](https://skills.sh/)                                                                                                        |
 
 ---
