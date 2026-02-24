@@ -72,7 +72,7 @@ The session is split into standalone topic docs. Open each one, walk through it,
 | 5   | Who triggers a skill and when        | [`05-invocation-control.md`](skills-and-agents/05-invocation-control.md)                         | —                    |
 | 6   | Setup in every tool                  | [`06-setup-guide.md`](skills-and-agents/06-setup-guide.md)                                       | Create a skill dir   |
 | 7   | The Agentic Loop                     | [`07-agentic-loop.md`](skills-and-agents/07-agentic-loop.md)                                     | —                    |
-| 8   | Common problems + cheat sheet        | [`08-common-problems-and-cheatsheet.md`](skills-and-agents/09-common-problems-and-cheatsheet.md) | —                    |
+| 8   | Common problems + cheat sheet        | [`08-common-problems-and-cheatsheet.md`](skills-and-agents/08-common-problems-and-cheatsheet.md) | —                    |
 
 ---
 
@@ -91,7 +91,7 @@ ai-workshop-agent-skills/
 │   ├── 05-invocation-control.md
 │   ├── 06-setup-guide.md
 │   ├── 07-agentic-loop.md
-│   └── 09-common-problems-and-cheatsheet.md
+│   └── 08-common-problems-and-cheatsheet.md
 │
 ├── .claude/skills/                        ← Skills for Claude Code, Cursor, Copilot, OpenCode
 │   ├── commit-format/                        Pattern 1: Basic Router
