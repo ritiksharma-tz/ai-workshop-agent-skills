@@ -65,14 +65,14 @@ The session is split into standalone topic docs. Open each one, walk through it,
 
 | #   | Topic                                | Doc                                                                                              | Demo                 |
 | --- | ------------------------------------ | ------------------------------------------------------------------------------------------------ | -------------------- |
-| 1   | Why skills beat one-off prompts      | [`01-skills-vs-prompts.md`](skills-and-agents/01-skills-vs-prompts.md)                           | —                    |
-| 2   | The open standard & SKILL.md anatomy | [`02-agent-skills-standard.md`](skills-and-agents/02-agent-skills-standard.md)                   | Show a SKILL.md file |
-| 3   | How agents load skills efficiently   | [`03-progressive-disclosure.md`](skills-and-agents/03-progressive-disclosure.md)                 | —                    |
-| 4   | Five implementation patterns         | [`04-five-patterns.md`](skills-and-agents/04-five-patterns.md)                                   | Show each skill dir  |
-| 5   | Who triggers a skill and when        | [`05-invocation-control.md`](skills-and-agents/05-invocation-control.md)                         | —                    |
-| 6   | Setup in every tool                  | [`06-setup-guide.md`](skills-and-agents/06-setup-guide.md)                                       | Create a skill dir   |
-| 7   | The Agentic Loop                     | [`07-agentic-loop.md`](skills-and-agents/07-agentic-loop.md)                                     | —                    |
-| 8   | Common problems + cheat sheet        | [`08-common-problems-and-cheatsheet.md`](skills-and-agents/08-common-problems-and-cheatsheet.md) | —                    |
+| 1   | Why skills beat one-off prompts      | [`01-skills-vs-prompts.md`](Skills-and-Agents/01-skills-vs-prompts.md)                           | —                    |
+| 2   | The open standard & SKILL.md anatomy | [`02-agent-skills-standard.md`](Skills-and-Agents/02-agent-skills-standard.md)                   | Show a SKILL.md file |
+| 3   | How agents load skills efficiently   | [`03-progressive-disclosure.md`](Skills-and-Agents/03-progressive-disclosure.md)                 | —                    |
+| 4   | Five implementation patterns         | [`04-five-patterns.md`](Skills-and-Agents/04-five-patterns.md)                                   | Show each skill dir  |
+| 5   | Who triggers a skill and when        | [`05-invocation-control.md`](Skills-and-Agents/05-invocation-control.md)                         | —                    |
+| 6   | Setup in every tool                  | [`06-setup-guide.md`](Skills-and-Agents/06-setup-guide.md)                                       | Create a skill dir   |
+| 7   | The Agentic Loop                     | [`07-agentic-loop.md`](Skills-and-Agents/07-agentic-loop.md)                                     | —                    |
+| 8   | Common problems + cheat sheet        | [`08-common-problems-and-cheatsheet.md`](Skills-and-Agents/08-common-problems-and-cheatsheet.md) | —                    |
 
 ---
 
@@ -83,7 +83,7 @@ ai-workshop-agent-skills/
 │
 ├── README.md                              ← You are here
 │
-├── skills-and-agents/                     ← Workshop topic docs (read & explain)
+├── Skills-and-Agents/                     ← Workshop topic docs (read & explain)
 │   ├── 01-skills-vs-prompts.md
 │   ├── 02-agent-skills-standard.md
 │   ├── 03-progressive-disclosure.md
