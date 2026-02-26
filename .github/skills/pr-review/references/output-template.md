@@ -1,13 +1,42 @@
 # PR Review Output Template
 
+When saving as an artifact document, prepend YAML frontmatter before the report body:
+
+```yaml
+---
+type: pr-review
+pr_number: "{number_or_branch}"
+pr_title: "{title}"
+pr_author: "{author}"
+branch: "{source_branch} -> {target_branch}"
+date: "{YYYY-MM-DD}"
+commit: "{current_HEAD_short_hash}"
+focus: "{focus_area}"
+status: "{Approved | Approved with Comments | Changes Requested}"
+stats:
+  files_changed: {n}
+  additions: {n}
+  deletions: {n}
+findings:
+  blockers: {n}
+  suggestions: {n}
+  nits: {n}
+---
+```
+
+## Report Body
+
 ```markdown
 # Pull Request Review
+
+**Report saved to:** `.reports/pr-reviews/{filename}.md`
 
 ## Overview
 
 **PR Title:** {title}
 **Author:** @{author}
 **Branch:** `{branch}` -> `{target}`
+**Date:** {YYYY-MM-DD} | **Commit:** `{short_hash}`
 
 | Metric | Value |
 |--------|-------|

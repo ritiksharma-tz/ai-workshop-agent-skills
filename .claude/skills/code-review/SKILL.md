@@ -5,7 +5,16 @@ description: Deep, multi-pass code review analyzing security vulnerabilities, lo
 
 # Code Review
 
-Perform a structured four-pass review of the target code.
+Perform a structured four-pass review of the target code and save the report as a persistent document artifact.
+
+## Output Structure
+
+```
+.reports/
+├── code-reviews/
+│   └── {YYYY-MM-DD}-{target-slug}.md    # Full review report
+└── metadata.json                         # Report tracking
+```
 
 ## Execution
 
@@ -34,6 +43,53 @@ Structure findings as: Critical (must fix) → Major → Minor → Suggestions �
 
 Each finding must include: file:line, severity, category, current code, recommended fix, and impact explanation.
 
+### Phase 4: Save Artifact
+
+**MANDATORY: Always save the full review report as a document artifact.**
+
+1. Create `.reports/code-reviews/` directory if it doesn't exist
+2. Generate filename: `{YYYY-MM-DD}-{target-slug}.md` where `target-slug` is the sanitized file/directory name (e.g., `2025-03-15-src-auth.md`)
+3. Write the full report with YAML frontmatter metadata:
+
+```yaml
+---
+type: code-review
+target: "{file_or_directory_path}"
+date: "{YYYY-MM-DD}"
+commit: "{current_HEAD_short_hash}"
+focus: "{focus_area}"
+severity_filter: "{severity}"
+findings:
+  critical: {n}
+  major: {n}
+  minor: {n}
+  suggestions: {n}
+overall: "{Ready to merge | Needs minor changes | Needs significant work}"
+---
+```
+
+4. Write the full review report body (same content as displayed to user) after the frontmatter
+5. Update `.reports/metadata.json` — merge this report entry into the `reports` array:
+
+```json
+{
+  "reports": [
+    {
+      "type": "code-review",
+      "file": "code-reviews/{filename}.md",
+      "target": "{path}",
+      "date": "{ISO timestamp}",
+      "commit": "{hash}",
+      "findings": { "critical": 0, "major": 1, "minor": 3 }
+    }
+  ]
+}
+```
+
+6. Display to the user: the summary + the file path where the full report was saved
+
+**If `--no-artifact` is passed, skip artifact generation and only display to conversation.**
+
 ## Large Codebases
 
 When too large for one pass:
@@ -47,3 +103,4 @@ When too large for one pass:
 - `--severity` — Minimum: `critical`, `major`, `minor`, `all` (default: all)
 - `--continue` — Resume from checkpoint
 - `--incremental` — Only review git-changed files
+- `--no-artifact` — Skip saving report as document (display only)

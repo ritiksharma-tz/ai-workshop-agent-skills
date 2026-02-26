@@ -5,7 +5,16 @@ description: Comprehensive security vulnerability scanner covering OWASP Top 10 
 
 # Security Scan
 
-Perform a systematic security audit of the target codebase.
+Perform a systematic security audit of the target codebase and save the report as a persistent document artifact.
+
+## Output Structure
+
+```
+.reports/
+├── security-scans/
+│   └── {YYYY-MM-DD}-{target-slug}.md    # Full security scan report
+└── metadata.json                          # Report tracking
+```
 
 ## Execution
 
@@ -42,6 +51,68 @@ Use the output template in [references/output-template.md](references/output-tem
 
 Each vulnerability must include: CWE ID, CVSS score, OWASP category, file:line, vulnerable code, attack vector, impact, and remediation with secure code.
 
+### Phase 5: Save Artifact
+
+**MANDATORY: Always save the full security scan report as a document artifact.**
+
+1. Create `.reports/security-scans/` directory if it doesn't exist
+2. Generate filename: `{YYYY-MM-DD}-{target-slug}.md` (e.g., `2025-03-15-src-api.md`)
+3. Write the full report with YAML frontmatter metadata:
+
+```yaml
+---
+type: security-scan
+target: "{scanned_path}"
+date: "{YYYY-MM-DD}"
+commit: "{current_HEAD_short_hash}"
+focus: "{focus_area}"
+risk_level: "{Critical | High | Medium | Low}"
+files_scanned: {n}
+vulnerabilities:
+  critical: {n}
+  high: {n}
+  medium: {n}
+  low: {n}
+secrets_found: {n}
+owasp_compliance:
+  A01: "{pass | fail | warning}"
+  A02: "{pass | fail | warning}"
+  A03: "{pass | fail | warning}"
+  A04: "{pass | fail | warning}"
+  A05: "{pass | fail | warning}"
+  A06: "{pass | fail | warning}"
+  A07: "{pass | fail | warning}"
+  A08: "{pass | fail | warning}"
+  A09: "{pass | fail | warning}"
+  A10: "{pass | fail | warning}"
+---
+```
+
+4. Write the full security scan report body after the frontmatter
+5. Update `.reports/metadata.json` — merge this report entry into the `reports` array:
+
+```json
+{
+  "reports": [
+    {
+      "type": "security-scan",
+      "file": "security-scans/{filename}.md",
+      "target": "{path}",
+      "date": "{ISO timestamp}",
+      "commit": "{hash}",
+      "risk_level": "{Critical | High | Medium | Low}",
+      "vulnerabilities": { "critical": 0, "high": 1, "medium": 3, "low": 2 },
+      "secrets_found": 0
+    }
+  ]
+}
+```
+
+6. Display to the user: the executive summary + the file path where the full report was saved
+7. If `--fail-on` threshold is met, clearly indicate FAIL status in both the artifact and conversation output
+
+**If `--no-artifact` is passed, skip artifact generation and only display to conversation.**
+
 ## Large Codebases
 
 Prioritize by risk: auth/authz code → external-facing endpoints → data access layers → config files. Save progress to checkpoint JSON.
@@ -53,3 +124,4 @@ Prioritize by risk: auth/authz code → external-facing endpoints → data acces
 - `--fail-on` — Exit with error if severity found: `critical`, `high`, `medium`
 - `--continue` — Resume from checkpoint
 - `--exclude` — Glob patterns to exclude
+- `--no-artifact` — Skip saving report as document (display only)

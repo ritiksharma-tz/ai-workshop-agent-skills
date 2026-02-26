@@ -1,10 +1,46 @@
 # Security Scan Output Template
 
+When saving as an artifact document, prepend YAML frontmatter before the report body:
+
+```yaml
+---
+type: security-scan
+target: "{scanned_path}"
+date: "{YYYY-MM-DD}"
+commit: "{current_HEAD_short_hash}"
+focus: "{focus_area}"
+risk_level: "{Critical | High | Medium | Low}"
+files_scanned: {n}
+vulnerabilities:
+  critical: {n}
+  high: {n}
+  medium: {n}
+  low: {n}
+secrets_found: {n}
+owasp_compliance:
+  A01: "{pass | fail | warning}"
+  A02: "{pass | fail | warning}"
+  A03: "{pass | fail | warning}"
+  A04: "{pass | fail | warning}"
+  A05: "{pass | fail | warning}"
+  A06: "{pass | fail | warning}"
+  A07: "{pass | fail | warning}"
+  A08: "{pass | fail | warning}"
+  A09: "{pass | fail | warning}"
+  A10: "{pass | fail | warning}"
+---
+```
+
+## Report Body
+
 ```markdown
 # Security Scan Report: {project_path}
 
+**Report saved to:** `.reports/security-scans/{filename}.md`
+
 ## Executive Summary
 **Scan Date:** {date}
+**Commit:** `{short_hash}`
 **Files Scanned:** {count}
 **Risk Level:** Critical | High | Medium | Low
 
