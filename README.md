@@ -275,7 +275,11 @@ This repo includes skills in **all five directories** so it works everywhere out
 | Google Antigravity Skills | [codelabs.developers.google.com/...antigravity-skills](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) |
 | OpenCode Skills           | [opencode.ai/docs/skills](https://opencode.ai/docs/skills/)                                                                            |
 | Example Skills Library    | [github.com/anthropics/skills](https://github.com/anthropics/skills)                                                                   |
+| Awesome Claude Skills     | [github.com/ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)                                    |
+| Remotion AI Skills        | [remotion.dev/docs/ai/skills](https://www.remotion.dev/docs/ai/skills)                                                                 |
+| Frontend Design Skill     | [Claude Code frontend-design plugin](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) |
+| UI/UX Pro Max Skill       | [github.com/nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)                            |
 | Vercel Agent Skills       | [github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills/tree/main)                                           |
-| Skills.sh                 | [skills.sh](https://skills.sh/)                                                                                                        |
+| Skills.sh                 | [skills.sh](https://skills.sh/) — browse and discover community-built skills                                                           |
 
 ---

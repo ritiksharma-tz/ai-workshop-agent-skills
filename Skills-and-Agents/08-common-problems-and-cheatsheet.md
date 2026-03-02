@@ -67,10 +67,16 @@
 | Agent Skills Standard | [agentskills.io](https://agentskills.io)                                                                                               |
 | Specification         | [agentskills.io/specification](https://agentskills.io/specification)                                                                   |
 | Example Skills        | [github.com/anthropics/skills](https://github.com/anthropics/skills)                                                                   |
+| Awesome Claude Skills | [github.com/ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)                                    |
+| Remotion AI Skills    | [remotion.dev/docs/ai/skills](https://www.remotion.dev/docs/ai/skills)                                                                 |
+| Frontend Design Skill | [Claude Code frontend-design plugin](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) |
+| UI/UX Pro Max Skill   | [github.com/nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)                            |
 | Claude Code Docs      | [code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills)                                                               |
 | Cursor Docs           | [cursor.com/docs/context/skills](https://cursor.com/docs/context/skills)                                                               |
 | Copilot Docs          | [docs.github.com/.../about-agent-skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)                        |
 | Antigravity Docs      | [codelabs.developers.google.com/...antigravity-skills](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) |
 | OpenCode Docs         | [opencode.ai/docs/skills](https://opencode.ai/docs/skills/)                                                                            |
 | Vercel Agent Skills   | [github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills/tree/main)                                           |
-| Skills.sh             | [skills.sh](https://skills.sh/)                                                                                                        |
+| Skills.sh             | [skills.sh](https://skills.sh/) — browse and discover community-built skills                                                           |
+
+> **Tip:** Use [skills.sh](https://skills.sh/) to find new skills and explore what the community has built. It's the easiest way to discover ready-made skills you can drop into your project.
